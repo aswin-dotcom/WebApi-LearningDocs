@@ -4,7 +4,8 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5197",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -13,7 +14,8 @@
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7134;http://localhost:5197",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -21,3 +23,5 @@
     }
   }
 }
+//•	launchBrowser controls whether a browser opens automatically when you start the app. true opens it and false doesn't, so you would have to open the URL yourself.
+//•	launchUrl is the path added to the end of applicationUrl when the browser opens. For example, "launchUrl": "swagger" opens https://localhost:7134/swagger. If you leave it out, the browser opens the root URL /, which has no page in a Web API, so you'd see a 404.
