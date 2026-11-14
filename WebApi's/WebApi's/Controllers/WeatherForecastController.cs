@@ -19,9 +19,13 @@ namespace WebApi_s.Controllers
 
         public ActionResult Index()
         {
+            _Logger.LogTrace("This is a trace log message.");
+            _Logger.LogDebug("This is a debug log message.");
             _Logger.LogInformation("This is an information log message.");
             _Logger.LogWarning("This is a warning log message.");
             _Logger.LogError("This is an error log message.");
+            _Logger.LogCritical("This is a critical log message.");
+            //_Logger.Log(LogLevel.None, "This is a none log message.");
             return Ok("Logs have been written to the console.");
         }
     }

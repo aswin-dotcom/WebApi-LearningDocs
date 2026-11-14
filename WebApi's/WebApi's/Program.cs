@@ -3,7 +3,7 @@ using WebApi_s.Logging;
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
-//builder.Logging.AddDebug();
+builder.Logging.AddDebug();
 
 // Add services to the container.
 
