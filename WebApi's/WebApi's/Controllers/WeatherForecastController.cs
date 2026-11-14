@@ -8,9 +8,9 @@ namespace WebApi_s.Controllers
     public class WeatherForecastController : ControllerBase
     {
         private readonly ILoggers _logger;
-        public WeatherForecastController()
+        public WeatherForecastController(ILoggers logger)
         {
-            _logger = new LogToConsole(); // You can change this to LogToFile or LogToDb as needed
+            _logger = logger;
         }
 
         [HttpGet]
