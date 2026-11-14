@@ -7,18 +7,22 @@ namespace WebApi_s.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly ILoggers _logger;
-        public WeatherForecastController(ILoggers logger)
+
+        private readonly ILogger<WeatherForecastController> _Logger;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
-            _logger = logger;
+            _Logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet()]
 
         public ActionResult Index()
         {
-            _logger.Log("WeatherForecastController Index action called.");
-            return Ok("");
+            _Logger.LogInformation("This is an information log message.");
+            _Logger.LogWarning("This is a warning log message.");
+            _Logger.LogError("This is an error log message.");
+            return Ok("Logs have been written to the console.");
         }
     }
 }
